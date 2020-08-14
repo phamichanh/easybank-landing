@@ -1,0 +1,375 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 5px 20px 5px 20px;
+  margin: 0px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 300;
+}
+
+p {
+  color: hsl(233, 8%, 62%);
+  font-size: 0.9em;
+}
+
+.colored-section {
+  background-color: hsl(0, 0%, 98%);
+}
+
+/* Heading */
+.big-heading {
+  font-size: 3em;
+}
+
+.mid-heading {
+  font-size: 2em;
+}
+
+a {
+  font-size: 0.8em;
+}
+
+/* Navigation */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Button request */
+.btn-request {
+  width: 160px;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  background-image: linear-gradient(to right, hsl(136, 65%, 51%) 0%, hsl(192, 70%, 51%) 100%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.btn-request:hover {
+  filter: brightness(110%);
+}
+
+/* Header ---------------------------------------------------------------*/
+header {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.vertical-frame {
+  position: relative;
+  height: 100%;
+}
+
+#logo-header {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+
+.main-nav ul li {
+  display: inline;
+  cursor: pointer;
+  padding: 30px 0 30px 0;
+  margin: 0 15px 0 15px;
+  float: left;
+  border-bottom: 4px solid;
+  border-color: #FFF;
+  color: hsl(233, 8%, 62%);
+}
+
+.main-nav ul li:hover {
+  border-image: linear-gradient(to right, hsl(136, 65%, 51%) 0%, hsl(192, 70%, 51%) 100%);
+  border-image-slice: 1;
+  color: hsl(233, 26%, 24%);
+}
+
+#btn-req-header {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+}
+
+/* Introduction ------------------------------------------------------*/
+#introduction {
+  padding: 180px 0;
+  position: relative;
+}
+
+#introduction .big-heading, #introduction p {
+  margin-bottom: 30px;
+}
+
+#bg-intro {
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  left: 45%;
+  top: 0;
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 65%;
+  background-size: auto 165%;
+}
+
+#img-mobiles-dock {
+  position: absolute;
+  width: 55%;
+  height: 120%;
+  top: 0;
+  right: 0;
+}
+
+.img-mobiles-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+.img-mobiles-frame::after {
+  display: block;
+  content: '';
+  padding-bottom: 100%;
+}
+
+.img-mobiles-frame img {
+  position: absolute;
+  top: -15%;
+  right: -15%;
+  width: auto;
+  height: 115%;
+}
+
+/* Features ------------------------------------------------------*/
+#features {
+  background-color: hsl(220, 16%, 96%);
+  padding: 7% 0;
+}
+
+#features .mid-heading {
+  margin-bottom: 30px;
+}
+
+.feature-heading-box {
+  margin-bottom: 65px;
+}
+
+.feature-item img {
+  margin-bottom: 35px;
+}
+
+.feature-item h3 {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+/* Articles ------------------------------------------------------*/
+#latest-articles {
+  padding: 7% 0;
+}
+
+#latest-articles .mid-heading {
+  margin-bottom: 50px;
+}
+
+/* Card */
+.card {
+  overflow: hidden;
+}
+
+.img-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.img-frame::after {
+  display: block;
+  content: '';
+  padding-bottom: 65%;
+}
+
+.img-frame img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.card-body .author-name {
+  font-size: 0.6em;
+  margin-bottom: 15px;
+}
+
+.card-body .card-title {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: hsl(233, 26%, 24%);
+}
+
+.card-title a:hover {
+  color: hsl(136, 65%, 51%);
+}
+
+.card-body .card-text {
+  font-size: 0.7em;
+}
+
+
+
+/* Footer ---------------------------------------------------------------*/
+footer {
+  background-color: hsl(233, 26%, 24%);
+  color: hsl(0, 0%, 100%);
+  padding: 4% 0;
+}
+
+footer .btn-request {
+  margin-bottom: 30px;
+}
+
+/* Navigation link */
+.nav-link {
+  padding: 0;
+}
+
+.nav-link ul li {
+  margin-bottom: 20px;
+}
+
+.nav-link a {
+  cursor: pointer;
+}
+
+.nav-link a:hover {
+  color: hsl(136, 65%, 51%);
+}
+
+
+/* Shared */
+#nav-shared {
+  position: absolute;
+  bottom: 20px;
+}
+
+#nav-shared ul {
+  overflow: auto;
+}
+
+#nav-shared ul li {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+#nav-shared a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+#share-facebook {
+  background-image: url("../images/icon-facebook.svg");
+}
+
+#share-facebook:hover {
+  background-image: url("../images/icon-facebook-hover.svg");
+}
+
+#share-youtube {
+  background-image: url("../images/icon-youtube.svg");
+}
+
+#share-youtube:hover {
+  background-image: url("../images/icon-youtube-hover.svg");
+}
+
+#share-twitter {
+  background-image: url("../images/icon-twitter.svg");
+}
+
+#share-twitter:hover {
+  background-image: url("../images/icon-twitter-hover.svg");
+}
+
+#share-pinterest {
+  background-image: url("../images/icon-pinterest.svg");
+}
+
+#share-pinterest:hover {
+  background-image: url("../images/icon-pinterest-hover.svg");
+}
+
+#share-instagram {
+  background-image: url("../images/icon-instagram.svg");
+}
+
+#share-instagram:hover {
+  background-image: url("../images/icon-instagram-hover.svg");
+}
+
+#copy-write {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  font-size: 0.8em;
+}
+
+
+/*
+### Primary
+
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+
+### Neutral
+
+- Grayish Blue: hsl(233, 8%, 62%) 150, 152, 166 #9698A6
+- Light Grayish Blue: hsl(220, 16%, 96%) 243, 244, 246 #F3F4F6
+- Very Light Gray: hsl(0, 0%, 98%) 250, 250, 250 #FAFAFA
+- White: hsl(0, 0%, 100%) 255, 255, 255 #FFF
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+ */
