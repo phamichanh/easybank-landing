@@ -36,6 +36,7 @@ p {
 
 a {
   font-size: 0.8em;
+  cursor: pointer;
 }
 
 /* Navigation */
@@ -64,10 +65,6 @@ ul {
 /* Header ---------------------------------------------------------------*/
 header {
   background-color: hsl(0, 0%, 100%);
-  position: fixed;
-  z-index: 1;
-  width: 100vw;
-  top: 0;
 }
 
 .vertical-frame {
@@ -116,7 +113,6 @@ header {
 #introduction {
   padding: 10% 0;
   position: relative;
-  margin-top: 91px;
 }
 
 #introduction .big-heading, #introduction p {
@@ -387,6 +383,10 @@ footer .btn-request {
 
   header {
     height: 64px;
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    top: 0;
   }
 
   /*--BUTTON-MENU-START---------------------------------------------------------*/
