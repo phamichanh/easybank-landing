@@ -26,14 +26,14 @@
   <header>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-4">
           <div class="vertical-frame">
             <img id="logo-header" src="images/logo.svg" alt="easybank logo header">
           </div>
         </div>
-        <div class="col-md-6">
-          <nav id="nav-header" class="main-nav">
-            <ul class="nav justify-content-center">
+        <div class="col-lg-6 col-8">
+          <nav id="nav-header">
+            <ul class="nav justify-content-sm-end justify-content-lg-center">
               <li><a>Home</a></li>
               <li><a>About</a></li>
               <li><a>Contact</a></li>
@@ -41,8 +41,14 @@
               <li><a>Careers</a></li>
             </ul>
           </nav>
+
+          <div id="btn-show-hide-menu" onclick="showHideMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-3 hide-for-mobile">
           <div class="vertical-frame">
             <button id="btn-req-header" class="btn-request" type="button" name="button">Request Invite</button>
           </div>
@@ -52,10 +58,19 @@
   </header>
 
   <section id="introduction" class="colored-section">
-    <div id="bg-intro"></div>
+    <div id="intro-main-img">
+      <div id="bg-intro"></div>
+
+      <div id="img-mobiles-dock">
+        <div class="img-mobiles-frame">
+          <img class="img-mobiles" src="images/image-mockups.png" alt="mockups mobiles">
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-lg-6 col-md-7">
           <h1 class="big-heading">Next generation digital banking</h1>
           <p>
             Take your financial life online. Your Easybank account will be a one-stop-shop
@@ -65,11 +80,7 @@
         </div>
       </div>
     </div>
-    <div id="img-mobiles-dock">
-      <div class="img-mobiles-frame">
-        <img class="img-mobiles" src="images/image-mockups.png" alt="mockups mobiles">
-      </div>
-    </div>
+
   </section>
 
   <section id="features">
@@ -193,10 +204,10 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-3 col-md-3">
           <img src="images/logo-footer.svg" alt="easybank logo footer">
           <nav id="nav-shared">
-            <ul>
+            <ul class="justify-content-sm-center">
               <li><a id="share-facebook" href="#"></a></li>
               <li><a id="share-youtube" href="#"></a></li>
               <li><a id="share-twitter" href="#"></a></li>
@@ -205,7 +216,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-lg-2 col-md-4">
+        <div class="col-lg-2 col-md-2">
           <nav class="nav-link">
             <ul>
               <li><a>About Us</a></li>
@@ -214,7 +225,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-lg-2 col-md-4">
+        <div class="col-lg-2 col-md-3">
           <nav class="nav-link">
             <ul>
               <li><a>Careers</a></li>
@@ -223,7 +234,7 @@
             </ul>
           </nav>
         </div>
-        <div class="col-lg-5 text-md-right">
+        <div class="col-lg-5 col-md-4 text-md-right">
           <button class="btn-request" type="button" name="button">Request Invite</button>
           <p id="copy-write">© Easybank. All Rights Reserved</p>
         </div>
@@ -235,5 +246,11 @@
       </div>
     </div>
   </footer>
+  <script>
+    function showHideMenu(x) {
+      x.classList.toggle("change");
+      document.getElementById("nav-header").classList.toggle("active-menu");
+    }
+  </script>
 </body>
 </html>

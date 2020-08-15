@@ -64,6 +64,10 @@ ul {
 /* Header ---------------------------------------------------------------*/
 header {
   background-color: hsl(0, 0%, 100%);
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  top: 0;
 }
 
 .vertical-frame {
@@ -83,7 +87,7 @@ header {
   margin: auto 0;
 }
 
-.main-nav ul li {
+#nav-header ul li {
   display: inline;
   cursor: pointer;
   padding: 30px 0 30px 0;
@@ -94,7 +98,7 @@ header {
   color: hsl(233, 8%, 62%);
 }
 
-.main-nav ul li:hover {
+#nav-header ul li:hover {
   border-image: linear-gradient(to right, hsl(136, 65%, 51%) 0%, hsl(192, 70%, 51%) 100%);
   border-image-slice: 1;
   color: hsl(233, 26%, 24%);
@@ -110,8 +114,9 @@ header {
 
 /* Introduction ------------------------------------------------------*/
 #introduction {
-  padding: 180px 0;
+  padding: 10% 0;
   position: relative;
+  margin-top: 91px;
 }
 
 #introduction .big-heading, #introduction p {
@@ -122,8 +127,8 @@ header {
   z-index: 0;
   position: absolute;
   height: 100%;
-  width: 55%;
-  left: 45%;
+  width: 53%;
+  left: 47%;
   top: 0;
   background-image: url("../images/bg-intro-desktop.svg");
   background-repeat: no-repeat;
@@ -133,7 +138,7 @@ header {
 
 #img-mobiles-dock {
   position: absolute;
-  width: 55%;
+  width: 50%;
   height: 120%;
   top: 0;
   right: 0;
@@ -152,13 +157,14 @@ header {
   padding-bottom: 100%;
 }
 
-.img-mobiles-frame img {
+/* Responsive > 768 and < 767 */
+/* .img-mobiles-frame img {
   position: absolute;
   top: -15%;
   right: -15%;
   width: auto;
   height: 115%;
-}
+} */
 
 /* Features ------------------------------------------------------*/
 #features {
@@ -244,13 +250,11 @@ header {
   font-size: 0.7em;
 }
 
-
-
 /* Footer ---------------------------------------------------------------*/
 footer {
   background-color: hsl(233, 26%, 24%);
   color: hsl(0, 0%, 100%);
-  padding: 4% 0;
+  padding: 5% 0;
 }
 
 footer .btn-request {
@@ -274,6 +278,12 @@ footer .btn-request {
   color: hsl(136, 65%, 51%);
 }
 
+#copy-write {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  font-size: 0.8em;
+}
 
 /* Shared */
 #nav-shared {
@@ -344,13 +354,225 @@ footer .btn-request {
   background-image: url("../images/icon-instagram-hover.svg");
 }
 
-#copy-write {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  font-size: 0.8em;
+
+@media only screen and (max-width: 991px) {
+  .hide-for-mobile {
+    visibility: hidden;
+  }
+
+  /* Heading */
+  .big-heading {
+    font-size: 2.1em;
+  }
+
+  .mid-heading {
+    font-size: 1.8em;
+  }
+
+  /* Introduction ------------------------------------------------------*/
+
 }
 
+@media only screen and (min-width: 768px) {
+  .img-mobiles-frame img {
+    position: absolute;
+    top: -15%;
+    right: -15%;
+    width: auto;
+    height: 115%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  header {
+    height: 64px;
+  }
+
+  /*--BUTTON-MENU-START---------------------------------------------------------*/
+  header #btn-show-hide-menu {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    margin: 16px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: hsl(233, 26%, 24%);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+    transform: rotate(-45deg) translate(-4px, 4px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+  /*--BUTTON-MENU-START---------------------------------------------------------*/
+  #nav-header {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100vw;
+    height: 0vh;
+    z-index: 2;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity */
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  #nav-header.active-menu {
+    height: 100vh;
+  }
+
+  #nav-header ul {
+    background-color: #FFF;
+    width: calc(100% - 50px);
+    margin: 25px auto 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  #nav-header ul li {
+    width: 100%;
+    font-size: 1.2em;
+    border-bottom: none;
+    padding: 0;
+    margin: 10px 0 10px 0;
+  }
+
+  #nav-header ul li:hover {
+    border-image: none;
+    border-image-slice: none;
+    color: hsl(233, 26%, 24%);
+  }
+
+  /* Introduction ------------------------------------------------------*/
+  #introduction {
+    text-align: center;
+    padding: 0 0 10% 0;
+    margin-top: 64px;
+  }
+
+  #intro-main-img {
+    width: 100%;
+    height: 75vw;
+    position: relative;
+  }
+
+  #introduction .big-heading, #introduction p {
+    margin-bottom: 20px;
+  }
+
+  #introduction .big-heading {
+    margin-top: 10%;
+  }
+
+  #bg-intro {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top:0;
+    background-image: url("../images/bg-intro-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 100% 120%;
+  }
+
+  #img-mobiles-dock {
+    position: absolute;
+    width: 86%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+
+  .img-mobiles-frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+  }
+
+  .img-mobiles-frame::after {
+    display: none;
+    content: none;
+    padding-bottom: 0;
+  }
+
+  .img-mobiles-frame img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5%;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Features ------------------------------------------------------*/
+  #features {
+    text-align: center;
+  }
+
+  .feature-item {
+    margin-bottom: 30px;
+  }
+
+  /* Articles ------------------------------------------------------*/
+  #latest-articles .mid-heading {
+    text-align: center;
+  }
+
+  /* Footer ---------------------------------------------------------------*/
+  footer {
+    text-align: center;
+    padding: 10% 0;
+  }
+
+  #copy-write {
+    position: relative;
+    right: 0;
+  }
+
+  /* Shared */
+  #nav-shared {
+    position: relative;
+    bottom: 0;
+    top: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #nav-shared ul {
+    width: 175px;
+    margin: 0 auto;
+  }
+
+  #nav-shared ul li {
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+  }
+}
 
 /*
 ### Primary
